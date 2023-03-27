@@ -1,9 +1,13 @@
 import React from 'react';
-import { css } from '@emotion/react';
-import AppLayout from '@/layouts/AppLayout';
+import tw, { css } from 'twin.macro';
+import { AppLayout } from '@/layouts';
 
 const NotPound404 = () => {
-  const NotPound404Style = css``;
+  const style = {
+    defailt: css([
+      tw`  `,
+    ]),
+  };
 
   return (
     <>
@@ -11,7 +15,7 @@ const NotPound404 = () => {
         title='에러-404'
         url='/404'
       >
-        <div css={NotPound404Style} id='404-page'>페이지를 찾을 수 없습니다.</div>
+        <div css={style.defailt}>페이지를 찾을 수 없습니다.</div>
       </AppLayout>
     </>
   );

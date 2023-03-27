@@ -6,13 +6,15 @@ interface IMain {
 }
 
 export function Main({ children, }: IMain) {
-  const style = css`
-    ${tw`  `}
-  `;
+  const style = {
+    defailt: css([
+      tw`  `,
+    ]),
+  };
 
   return (
     <>
-      <main css={style}>{children}</main>
+      <main css={style.defailt}>{children}</main>
     </>
   );
 }

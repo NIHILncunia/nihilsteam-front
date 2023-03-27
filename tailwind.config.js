@@ -145,9 +145,21 @@ module.exports = {
         800: 800,
         900: 900,
       },
+      fontSize: {
+        small: '1rem',
+        normal: '1.2rem',
+        h1: '3rem',
+        h2: '2.5rem',
+        h3: '2.25rem',
+        h4: '2rem',
+        h5: '1.75rem',
+        h6: '1.5rem',
+      },
     },
   },
   plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
     plugin(({ addVariant, }) => {
       addVariant('first', [ '&:first-of-type', ]);
       addVariant('last', [ '&:last-of-type', ]);

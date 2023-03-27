@@ -7,18 +7,17 @@ export function IsLoading() {
   const isLoading = useIsFetching();
   const isMutating = useIsMutating();
 
-  const style = css`
-    ${tw` text-[4rem] absolute z-[2] w-[100vw] h-[100vh] flex items-center justify-center bg-white `}
-    ${(isLoading || isMutating) ? tw` block ` : tw` hidden `}
-
-    & > svg {
-      ${tw` animate-spin-2 `}
-    }
-  `;
+  const style = {
+    defailt: css([
+      tw` text-[4rem] absolute z-[2] w-[100vw] h-[100vh] flex items-center justify-center bg-white `,
+      (isLoading || isMutating) ? tw` block ` : tw` hidden `,
+      tw` [>svg]:( animate-spin-2 ) `,
+    ]),
+  };
 
   return (
     <>
-      <div css={style}>
+      <div css={style.defailt}>
         <CgSpinner />
       </div>
     </>

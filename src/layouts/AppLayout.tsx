@@ -1,7 +1,7 @@
 import React from 'react';
 import { Global } from '@emotion/react';
 import { useRouter } from 'next/router';
-import { GlobalStyles } from '@/styles';
+import tw, { css } from 'twin.macro';
 import {
   Footer, Header, Main, Meta, Nav
 } from '@/components/Layout';
@@ -26,9 +26,16 @@ export function AppLayout({
     updated,
   };
 
+  const style = {
+    global: css([
+      '@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css)',
+      tw` box-border p-0 m-0 font-sans `,
+    ]),
+  };
+
   return (
     <>
-      <Global styles={GlobalStyles} />
+      <Global styles={style.global} />
       <Meta meta={meta} />
 
       <Header />
