@@ -1,14 +1,17 @@
 import React from 'react';
 import tw, { css } from 'twin.macro';
+import { SerializedStyles } from '@emotion/react';
 
-interface IMain {
+interface Props {
+  styles?: SerializedStyles;
   children: React.ReactNode;
 }
 
-export function Main({ children, }: IMain) {
+export function Main({ styles, children, }: Props) {
   const style = {
     default: css([
       tw`  `,
+      styles,
     ]),
   };
 
