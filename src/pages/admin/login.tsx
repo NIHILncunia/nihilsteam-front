@@ -3,14 +3,14 @@ import tw, { css } from 'twin.macro';
 
 export default function AdminSignin() {
   const style = {
-    defailt: css([
+    default: css([
       tw`  `,
     ]),
   };
 
   return (
     <>
-      <div css={style.defailt}>content</div>
+      <div css={style.default}>content</div>
     </>
   );
 }

@@ -8,7 +8,7 @@ export function IsLoading() {
   const isMutating = useIsMutating();
 
   const style = {
-    defailt: css([
+    default: css([
       tw` text-[4rem] absolute z-[2] w-[100vw] h-[100vh] flex items-center justify-center bg-white `,
       (isLoading || isMutating) ? tw` block ` : tw` hidden `,
       tw` [>svg]:( animate-spin-2 ) `,
@@ -17,7 +17,7 @@ export function IsLoading() {
 
   return (
     <>
-      <div css={style.defailt}>
+      <div css={style.default}>
         <CgSpinner />
       </div>
     </>

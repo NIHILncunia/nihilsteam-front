@@ -3,14 +3,14 @@ import tw, { css } from 'twin.macro';
 
 export function Header() {
   const style = {
-    defailt: css([
+    default: css([
       tw`  `,
     ]),
   };
 
   return (
     <>
-      <header css={style.defailt}>헤더</header>
+      <header css={style.default}>헤더</header>
     </>
   );
 }

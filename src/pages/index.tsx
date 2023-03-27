@@ -4,7 +4,7 @@ import { AppLayout } from '@/layouts';
 
 export default function IndexPage() {
   const style = {
-    defailt: css([
+    default: css([
       tw`  `,
     ]),
   };
@@ -12,7 +12,7 @@ export default function IndexPage() {
   return (
     <>
       <AppLayout title='홈'>
-        <div css={style.defailt}>content</div>
+        <div css={style.default}>content</div>
       </AppLayout>
     </>
   );

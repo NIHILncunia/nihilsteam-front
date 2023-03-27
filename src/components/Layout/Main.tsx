@@ -7,14 +7,14 @@ interface IMain {
 
 export function Main({ children, }: IMain) {
   const style = {
-    defailt: css([
+    default: css([
       tw`  `,
     ]),
   };
 
   return (
     <>
-      <main css={style.defailt}>{children}</main>
+      <main css={style.default}>{children}</main>
     </>
   );
 }
